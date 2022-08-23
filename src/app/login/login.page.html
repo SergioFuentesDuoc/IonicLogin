@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Iniciar Sesion</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="full">
+        <ion-label position="floating">Usuario</ion-label>
+        <!-- Usamos ngModel para indicarle al input el objeto a utilizar-->
+        <ion-input type="text" [(ngModel)]="user.usuario"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <!-- Usamos ngModel para indicarle al input el objeto a utilizar-->
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <!-- Indicamos mediante el (click) la funcion a quien referenciara-->
+          <ion-button expand="full" (click)="ingresar()">Ingresar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>
